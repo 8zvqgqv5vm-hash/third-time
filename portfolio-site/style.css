@@ -361,29 +361,28 @@ a   { color: inherit; }
 }
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-auto-rows: 200px;                 /* Every 'block' is 200px tall */
+  grid-template-columns: repeat(6, 1fr); /* The magic 6-column base */
+  grid-auto-rows: 100px;                 /* Adjust this to change the overall scale */
   gap: 12px;
+  grid-auto-flow: dense;                 /* Fills in gaps automatically */
 }
 
-.photo-cell {
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-/* Vertical / Portrait - Takes up 2 rows */
-.photo-cell--tall {
+/* Landscape (3:2 Ratio) */
+/* 3 units wide / 2 units high = 1.5 ratio */
+.photo-cell--landscape {
+  grid-column: span 3;
   grid-row: span 2;
 }
 
-/* Horizontal / Landscape - Takes up 2 columns */
-.photo-cell--wide {
+/* Portrait (2:3 Ratio) */
+/* 2 units wide / 3 units high = 0.66 ratio */
+.photo-cell--portrait {
   grid-column: span 2;
+  grid-row: span 3;
 }
 
-/* Large Square - The 'Hero' image */
-.photo-cell--large {
+/* Small Square (1:1 Ratio) */
+.photo-cell--square {
   grid-column: span 2;
   grid-row: span 2;
 }
@@ -391,7 +390,7 @@ a   { color: inherit; }
 .photo-cell img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures no weird stretching */
+  object-fit: cover; 
   display: block;
 }
 /* Placeholder when image missing */
