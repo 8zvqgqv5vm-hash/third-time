@@ -375,6 +375,7 @@ a   { color: inherit; }
   aspect-ratio: 1;
   position: relative;
 }
+
 .photo-cell--wide { grid-column: span 2; aspect-ratio: 2 / 1; }
 .photo-cell--tall { grid-row: span 2; aspect-ratio: 1 / 2; }
 
@@ -394,10 +395,15 @@ a   { color: inherit; }
   font-size: 0.65rem;
   color: var(--faint);
 }
-
 .photo-cell img {
+  width: 100%;            /* Forces image to fill the width of the cell */
+  height: 100%;           /* Forces image to fill the height of the cell */
+  object-fit: cover;      /* The magic fix: fills the box without stretching */
+  
+  /* Your existing code */
   transition: transform 0.5s var(--ease);
 }
+
 .photo-cell:hover img { transform: scale(1.03); }
 
 /* ─────────────────────────────────────────
