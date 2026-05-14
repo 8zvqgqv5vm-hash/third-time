@@ -360,14 +360,22 @@ a   { color: inherit; }
   margin-bottom: 0.75rem;
 }
 .photo-grid {
-  column-count: 3;       /* Number of columns */
-  column-gap: 15px;      /* Space between columns */
+  display: grid;
+  gap: 3px;
+  border-radius: 8px;
+  overflow: hidden;
 }
+.photo-grid--film    { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; }
+.photo-grid--digital { grid-template-columns: repeat(3, 1fr); }
 
 .photo-cell {
-  break-inside: avoid;   /* Prevents images from splitting across columns */
-  margin-bottom: 15px;   /* Space between images vertically */
+  background: var(--off-white);
+  overflow: hidden;
+  aspect-ratio: 1;
+  position: relative;
 }
+.photo-cell--wide { grid-column: span 2; aspect-ratio: 2 / 1; }
+.photo-cell--tall { grid-row: span 2; aspect-ratio: 1 / 2; }
 
 .photo-cell img {
   width: 100%;
