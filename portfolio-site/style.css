@@ -361,7 +361,7 @@ a   { color: inherit; }
 }
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for more variety */
+  grid-template-columns: repeat(3, 1fr); 
   grid-auto-rows: 200px;                 /* Every 'block' is 200px tall */
   gap: 12px;
 }
