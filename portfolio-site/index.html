@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Science Communicator</title>
+  <meta name="description" content="Science communicator, writer, photographer, and visual storyteller. Communications officer at IFST." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo" onclick="showSection('home', this)">Your Name</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"         class="nav-link active" onclick="showSection('home', this)">Home</a></li>
+        <li><a href="#writing"      class="nav-link"        onclick="showSection('writing', this)">Writing</a></li>
+        <li><a href="#photography"  class="nav-link"        onclick="showSection('photography', this)">Photography</a></li>
+        <li><a href="#about"        class="nav-link"        onclick="showSection('about', this)">About</a></li>
+        <li><a href="#work"         class="nav-link"        onclick="showSection('work', this)">Work with me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main container">
+
+    <!-- ═══════════════════ HOME ═══════════════════ -->
+    <section id="home" class="section active" aria-label="Home">
+
+      <div class="hero">
+        <p class="hero-eyebrow">Science communicator &amp; visual storyteller</p>
+        <h1 class="hero-heading">
+          Curious about<br>
+          how the world works.<br>
+          <em>Driven to explain it.</em>
+        </h1>
+        <p class="hero-bio">
+          I translate science into stories that stick — through writing, video, and visuals.
+          Currently communications officer at the Institute of Food Science and Technology.
+          BSc Biological and Medicinal Chemistry. Always carrying a camera.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Science communication</span>
+          <span class="tag">Food science</span>
+          <span class="tag">Photography</span>
+          <span class="tag">Video storytelling</span>
+          <span class="tag">Campaign strategy</span>
+        </div>
+        <div class="hero-links">
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="hero-link">LinkedIn ↗</a>
+          <a href="https://instagram.com/yourhandle"   target="_blank" rel="noopener" class="hero-link">Instagram ↗</a>
+          <a href="mailto:your@email.com" class="hero-link">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="home-grid-label">What I do</div>
+      <div class="what-grid">
+        <button class="what-card" onclick="showSection('writing', null)">
+          <span class="what-icon">✦</span>
+          <span class="what-title">Science writing</span>
+          <span class="what-desc">Translating research into public-facing writing — factsheets, explainers, articles</span>
+        </button>
+        <button class="what-card" onclick="showSection('photography', null)">
+          <span class="what-icon">◎</span>
+          <span class="what-title">Photography</span>
+          <span class="what-desc">Film and digital — events, science, everyday life. Fujifilm XT5 &amp; analogue</span>
+        </button>
+        <button class="what-card" onclick="showSection('work', null)">
+          <span class="what-icon">◈</span>
+          <span class="what-title">Video &amp; editing</span>
+          <span class="what-desc">Explainer video production, event coverage, science storytelling</span>
+        </button>
+      </div>
+
+      <div class="home-grid-label" style="margin-top:3rem">Recent writing</div>
+      <div class="writing-list">
+        <div class="writing-row">
+          <div class="writing-info">
+            <span class="writing-tag">Explainer</span>
+            <span class="writing-title">What food scientists actually do when they test for safety</span>
+          </div>
+          <span class="writing-meta">IFST · 2025</span>
+        </div>
+        <div class="writing-row">
+          <div class="writing-info">
+            <span class="writing-tag">Essay</span>
+            <span class="writing-title">Why science needs better storytellers, not simpler science</span>
+          </div>
+          <span class="writing-meta">LinkedIn · 2025</span>
+        </div>
+        <div class="writing-row">
+          <div class="writing-info">
+            <span class="writing-tag">Campaign</span>
+            <span class="writing-title">National Food Science &amp; Technology Week — brand identity</span>
+          </div>
+          <span class="writing-meta">IFST · 2024</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════ WRITING ═══════════════════ -->
+    <section id="writing" class="section" aria-label="Writing and science communication">
+
+      <div class="page-header">
+        <h2 class="page-title">Writing &amp; science communication</h2>
+        <p class="page-intro">
+          I write about food science, research methodology, and the craft of communicating science
+          to people who aren't scientists. I believe complexity is a design problem, not the audience's problem.
+        </p>
+      </div>
+
+      <div class="writing-list">
+
+        <article class="writing-row writing-row--full">
+          <div class="writing-info">
+            <div class="writing-meta writing-meta--top">Explainer · Institute of Food Science and Technology · 2025</div>
+            <h3 class="writing-title writing-title--lg">What food scientists actually do when they test for safety</h3>
+            <p class="writing-excerpt">A plain-English breakdown of how food safety testing works from lab to label — written for IFST's public-facing channel.</p>
+          </div>
+        </article>
+
+        <article class="writing-row writing-row--full">
+          <div class="writing-info">
+            <div class="writing-meta writing-meta--top">Factsheet · IFST Scientific Affairs · 2025</div>
+            <h3 class="writing-title writing-title--lg">Food additives: what they are, why they're used, and what the evidence says</h3>
+            <p class="writing-excerpt">Public-facing technical brief produced with IFST's scientific affairs team, translating regulatory and research language for general audiences.</p>
+          </div>
+        </article>
+
+        <article class="writing-row writing-row--full">
+          <div class="writing-info">
+            <div class="writing-meta writing-meta--top">Essay · Personal · 2025</div>
+            <h3 class="writing-title writing-title--lg">Why science needs better storytellers, not simpler science</h3>
+            <p class="writing-excerpt">On the difference between dumbing down and opening up — and why the most important skill in science communication is narrative, not jargon reduction.</p>
+          </div>
+        </article>
+
+        <article class="writing-row writing-row--full">
+          <div class="writing-info">
+            <div class="writing-meta writing-meta--top">Video project · University · Best presentation award · 2024</div>
+            <h3 class="writing-title writing-title--lg">Monitoring bushfires from space — a satellite data explainer</h3>
+            <p class="writing-excerpt">Final year research project presented to faculty. Awarded best presentation. Script, visuals, and delivery designed to communicate remote sensing data to a non-specialist audience.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-note">
+        More writing on <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn ↗</a>
+        and via <a href="https://theconversation.com" target="_blank" rel="noopener">The Conversation ↗</a>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════ PHOTOGRAPHY ═══════════════════ -->
+    <section id="photography" class="section" aria-label="Photography portfolio">
+
+      <div class="page-header">
+        <h2 class="page-title">Photography</h2>
+        <p class="page-intro">
+          Primarily film — recently transitioning to digital with a Fujifilm XT5.
+          Drawn to everyday moments, events, and the textures of the world at slower shutter speeds.
+        </p>
+      </div>
+
+      <!-- FILM -->
+      <div class="photo-section-label">Film</div>
+      <div class="photo-grid photo-grid--film">
+        <!-- Replace the src values with your actual image paths e.g. assets/film-01.jpg -->
+        <div class="photo-cell photo-cell--tall">
+          <img src="assets/film-01.jpg" alt="Film photograph 1" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell">
+          <img src="assets/film-02.jpg" alt="Film photograph 2" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell">
+          <img src="assets/film-03.jpg" alt="Film photograph 3" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell photo-cell--wide">
+          <img src="assets/film-04.jpg" alt="Film photograph 4" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell">
+          <img src="assets/film-05.jpg" alt="Film photograph 5" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell">
+          <img src="assets/film-06.jpg" alt="Film photograph 6" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+      </div>
+
+      <!-- DIGITAL -->
+      <div class="photo-section-label" style="margin-top:2.5rem">Digital — Fujifilm XT5</div>
+      <div class="photo-grid photo-grid--digital">
+        <div class="photo-cell">
+          <img src="assets/digital-01.jpg" alt="Digital photograph 1" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell photo-cell--wide">
+          <img src="assets/digital-02.jpg" alt="Digital photograph 2" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell photo-cell--wide">
+          <img src="assets/digital-03.jpg" alt="Digital photograph 3" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+        <div class="photo-cell">
+          <img src="assets/digital-04.jpg" alt="Digital photograph 4" loading="lazy" onerror="this.parentElement.classList.add('photo-empty')" />
+        </div>
+      </div>
+
+      <div class="section-note">
+        More on Instagram <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle ↗</a>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════ ABOUT ═══════════════════ -->
+    <section id="about" class="section" aria-label="About">
+
+      <div class="page-header">
+        <h2 class="page-title">About</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-block">
+          <h3 class="about-block-title">Background</h3>
+          <p class="about-block-text">
+            BSc Biological and Medicinal Chemistry graduate. I found science communication in my final
+            year through a module that rang a bell — I'd been learning science through YouTube for years
+            (ASAP Science, Veritasium) and suddenly realised that making that kind of content was a real thing people did.
+          </p>
+          <p class="about-block-text" style="margin-top:1rem">
+            Three months after graduating, I landed a communications officer role at the
+            Institute of Food Science and Technology — a chartered professional body and charity.
+            I've been building from there.
+          </p>
+        </div>
+        <div class="about-block">
+          <h3 class="about-block-title">What drives me</h3>
+          <p class="about-block-text">
+            I believe the gap between science and the public isn't an intelligence problem — it's a storytelling problem.
+            The evidence exists. The research is being done. What's missing is people who can translate it
+            without losing the truth, the nuance, or the wonder.
+          </p>
+          <p class="about-block-text" style="margin-top:1rem">
+            Outside of work I'm usually behind a camera — film first, now also digital — or working out
+            how to script a short science explainer that doesn't feel like a lecture.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 class="section-sub-heading">Experience</h3>
+      <div class="exp-list">
+        <div class="exp-row">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Communications Officer</div>
+              <div class="exp-org">Institute of Food Science and Technology · London</div>
+            </div>
+            <div class="exp-date">2024 – present</div>
+          </div>
+          <p class="exp-desc">
+            Full content lifecycle — social media strategy, campaign visual identity (National Food Science &amp; Technology Week),
+            science translation with the scientific affairs team, Google Analytics reporting, and quarterly comms strategy.
+          </p>
+        </div>
+        <div class="exp-row">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">BSc Biological and Medicinal Chemistry</div>
+              <div class="exp-org">University</div>
+            </div>
+            <div class="exp-date">2021 – 2024</div>
+          </div>
+          <p class="exp-desc">
+            Best presentation award for final year project on satellite monitoring of bushfires.
+            Modules in science communication and decolonising medicine. Video project on science communication.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 class="section-sub-heading">Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-label">Strong</div>
+          <div class="skill-tags">
+            <span class="tag tag--strong">Social media &amp; digital</span>
+            <span class="tag tag--strong">Visual identity &amp; design</span>
+            <span class="tag tag--strong">Science translation</span>
+            <span class="tag tag--strong">Campaign production</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Growing</div>
+          <div class="skill-tags">
+            <span class="tag">Storytelling &amp; writing</span>
+            <span class="tag">Analytics &amp; reporting</span>
+            <span class="tag">Video scripting</span>
+            <span class="tag">Campaign strategy</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════ WORK WITH ME ═══════════════════ -->
+    <section id="work" class="section" aria-label="Freelance services">
+
+      <div class="page-header">
+        <h2 class="page-title">Work with me</h2>
+        <p class="page-intro">
+          I take on freelance projects alongside my full-time role — particularly where science,
+          storytelling, and visual craft overlap. Based in the UK.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">✦</div>
+          <h3 class="service-title">Science writing</h3>
+          <p class="service-desc">
+            Explainers, factsheets, social content, and articles for researchers, charities,
+            and science organisations. I understand the research and can write for the people who don't.
+          </p>
+          <div class="service-good-for">Good for: NGOs, universities, science charities, food &amp; health brands</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">◎</div>
+          <h3 class="service-title">Event photography</h3>
+          <p class="service-desc">
+            Conferences, science events, community gatherings, and professional settings.
+            Comfortable in technical and academic environments. Film or digital.
+          </p>
+          <div class="service-good-for">Good for: scientific societies, research events, professional bodies</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">◈</div>
+          <h3 class="service-title">Video editing</h3>
+          <p class="service-desc">
+            Event highlight reels, explainer video cuts, and social content. Clean, purposeful editing
+            with an eye for pacing and narrative. No unnecessary transitions.
+          </p>
+          <div class="service-good-for">Good for: science communicators, researchers, events teams</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 class="section-sub-heading">Get in touch</h3>
+      <p class="page-intro" style="margin-bottom:1.5rem">
+        For project enquiries, collaborations, or just to say hello — reach out via email or LinkedIn.
+        I try to respond within a couple of days.
+      </p>
+      <div class="contact-list">
+        <a href="mailto:your@email.com"                                    class="contact-row">your@email.com</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="contact-row">linkedin.com/in/yourhandle ↗</a>
+        <a href="https://instagram.com/yourhandle"   target="_blank" rel="noopener" class="contact-row">@yourhandle on Instagram ↗</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Your Name</span>
+      <span class="footer-copy">Science communicator · London, UK</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
