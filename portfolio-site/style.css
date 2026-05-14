@@ -1,6 +1,8 @@
 /* ─────────────────────────────────────────
    RESET & BASE
 ───────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -12,9 +14,9 @@
   --faint:      #c4c1ba;
   --accent:     #2a5c45;
   --accent-lt:  #e5ede9;
-
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
+   
+   --font-display: 'Jost', sans-serif;
+  --font-body:    'Jost', sans-serif;
 
   --max-w: 860px;
   --nav-h: 60px;
