@@ -380,8 +380,6 @@ a   { color: inherit; }
   display: block;
   transition: transform 0.5s var(--ease);
 }
-.photo-cell--wide { grid-column: span 2; aspect-ratio: 2 / 1; }
-.photo-cell--tall { grid-row: span 2; aspect-ratio: 1 / 2; }
 
 /* Placeholder when image missing */
 .photo-cell.photo-empty {
