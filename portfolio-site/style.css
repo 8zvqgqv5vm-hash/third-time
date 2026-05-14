@@ -361,21 +361,25 @@ a   { color: inherit; }
 }
 
 .photo-grid {
-  display: grid;
-  gap: 3px;
+  column-count: 3;       /* Sets the number of columns */
+  column-gap: 10px;      /* Space between columns */
+  width: 100%;
+}
+
+.photo-cell {
+  display: inline-block; /* Required for the column flow */
+  width: 100%;
+  margin-bottom: 10px;   /* Space between photos vertically */
   border-radius: 8px;
   overflow: hidden;
 }
-.photo-grid--film    { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; }
-.photo-grid--digital { grid-template-columns: repeat(3, 1fr); }
 
-.photo-cell {
-  background: var(--off-white);
-  overflow: hidden;
-  aspect-ratio: 1;
-  position: relative;
+.photo-cell img {
+  width: 100%;
+  height: auto;          /* Maintains the natural vertical shape */
+  display: block;
+  transition: transform 0.5s var(--ease);
 }
-
 .photo-cell--wide { grid-column: span 2; aspect-ratio: 2 / 1; }
 .photo-cell--tall { grid-row: span 2; aspect-ratio: 1 / 2; }
 
@@ -395,12 +399,7 @@ a   { color: inherit; }
   font-size: 0.65rem;
   color: var(--faint);
 }
-.photo-cell img {
-  width: 100%;            /* Forces image to fill the width of the cell */
-  height: 100%;           /* Forces image to fill the height of the cell */
-  object-fit: cover;      /* The magic fix: fills the box without stretching */
-  
-  /* Your existing code */
+
   transition: transform 0.5s var(--ease);
 }
 
