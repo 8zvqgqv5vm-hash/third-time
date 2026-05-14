@@ -360,37 +360,18 @@ a   { color: inherit; }
   margin-bottom: 0.75rem;
 }
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* The magic 6-column base */
-  grid-auto-rows: 100px;                 /* Adjust this to change the overall scale */
-  gap: 12px;
-  grid-auto-flow: dense;                 /* Fills in gaps automatically */
+  column-count: 3;       /* Number of columns */
+  column-gap: 15px;      /* Space between columns */
 }
 
-/* Landscape (3:2 Ratio) */
-/* 3 units wide / 2 units high = 1.5 ratio */
-.photo-cell--landscape {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-
-/* Portrait (2:3 Ratio) */
-/* 2 units wide / 3 units high = 0.66 ratio */
-.photo-cell--portrait {
-  grid-column: span 2;
-  grid-row: span 3;
-}
-
-/* Small Square (1:1 Ratio) */
-.photo-cell--square {
-  grid-column: span 2;
-  grid-row: span 2;
+.photo-cell {
+  break-inside: avoid;   /* Prevents images from splitting across columns */
+  margin-bottom: 15px;   /* Space between images vertically */
 }
 
 .photo-cell img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  height: auto;          /* Respects the original height of every photo */
   display: block;
 }
 /* Placeholder when image missing */
