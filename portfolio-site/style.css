@@ -359,28 +359,41 @@ a   { color: inherit; }
   color: var(--muted);
   margin-bottom: 0.75rem;
 }
-
 .photo-grid {
-  column-count: 3;       /* Sets the number of columns */
-  column-gap: 10px;      /* Space between columns */
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for more variety */
+  grid-auto-rows: 200px;                 /* Every 'block' is 200px tall */
+  gap: 12px;
 }
 
 .photo-cell {
-  display: inline-block; /* Required for the column flow */
-  width: 100%;
-  margin-bottom: 10px;   /* Space between photos vertically */
-  border-radius: 8px;
+  position: relative;
   overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Vertical / Portrait - Takes up 2 rows */
+.photo-cell--tall {
+  grid-row: span 2;
+}
+
+/* Horizontal / Landscape - Takes up 2 columns */
+.photo-cell--wide {
+  grid-column: span 2;
+}
+
+/* Large Square - The 'Hero' image */
+.photo-cell--large {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .photo-cell img {
   width: 100%;
-  height: auto;          /* Maintains the natural vertical shape */
+  height: 100%;
+  object-fit: cover; /* Ensures no weird stretching */
   display: block;
-  transition: transform 0.5s var(--ease);
 }
-
 /* Placeholder when image missing */
 .photo-cell.photo-empty {
   display: flex;
