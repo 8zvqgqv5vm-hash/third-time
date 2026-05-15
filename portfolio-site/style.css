@@ -359,50 +359,53 @@ a   { color: inherit; }
   color: var(--muted);
   margin-bottom: 0.75rem;
 }
-.photo-grid {
-  display: grid;
-  gap: 3px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.photo-grid--film    { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; }
-.photo-grid--digital { grid-template-columns: repeat(3, 1fr); }
 
-.photo-cell {
+/* CSS columns give a natural collage/masonry feel */
+.photo-collage {
+  column-count: 3;
+  column-gap: 4px;
+  margin-bottom: 4px;
+}
+
+.photo-collage .photo-item {
+  break-inside: avoid;
+  margin-bottom: 4px;
+  overflow: hidden;
+  border-radius: 2px;
   background: var(--off-white);
-  overflow: hidden;
-  aspect-ratio: 1;
-  position: relative;
-}
-.photo-cell--wide { grid-column: span 2; aspect-ratio: 2 / 1; }
-.photo-cell--tall { grid-row: span 2; aspect-ratio: 1 / 2; }
-
-.photo-cell img {
-  width: 100%;
-  height: auto;          /* Respects the original height of every photo */
   display: block;
+  width: 100%;
 }
-/* Placeholder when image missing */
-.photo-cell.photo-empty {
+
+.photo-collage .photo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+  vertical-align: bottom;
+}
+.photo-collage .photo-item:hover img { transform: scale(1.03); }
+
+/* Placeholder when no image */
+.photo-collage .photo-item.photo-empty {
+  aspect-ratio: 2 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--faint);
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
 }
-.photo-cell.photo-empty::after {
+.photo-collage .photo-item.photo-empty::after {
   content: 'photo';
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.65rem;
   color: var(--faint);
 }
-.photo-cell img {
-  transition: transform 0.5s var(--ease);
-}
 
-.photo-cell:hover img { transform: scale(1.03); }
+/* Two-column variant for the wider shots */
+.photo-collage--wide {
+  column-count: 2;
+}
 
 /* ─────────────────────────────────────────
    ABOUT
