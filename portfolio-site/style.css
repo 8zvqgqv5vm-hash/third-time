@@ -568,6 +568,66 @@ a   { color: inherit; }
 }
 .section-note a:hover { border-color: var(--muted); }
 
+/* Stacked writing rows — tag + meta on one line, title always below */
+.writing-row--stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--stone);
+}
+.writing-info--stacked {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.writing-title--block {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+/* Article links — underline on hover only */
+.article-link {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur) var(--ease);
+}
+.article-link:hover { border-color: var(--faint); }
+/* If href is empty, don't show pointer cursor */
+.article-link[href=""] { pointer-events: none; cursor: default; }
+
+/* Photography page header with Instagram button side by side */
+.page-header--row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Instagram button */
+.ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--black);
+  text-decoration: none;
+  border: 1px solid var(--stone);
+  border-radius: 100px;
+  padding: 7px 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.ig-btn:hover { border-color: var(--faint); background: var(--off-white); }
+
 /* ─────────────────────────────────────────
    FOOTER
 ───────────────────────────────────────── */
