@@ -31,6 +31,20 @@ function showSection(id, clickedLink) {
   // Prevent default href jump
   return false;
 }
+// ─── On page load: check URL hash and show correct section ────────────────────
+
+function loadFromHash() {
+  var hash = window.location.hash.replace('#', '');
+  var valid = ['home', 'writing', 'photography', 'about', 'work'];
+  if (hash && valid.indexOf(hash) !== -1) {
+    showSection(hash, null);
+  }
+}
+
+window.addEventListener('load', loadFromHash);
+
+// Also handle back/forward browser navigation
+window.addEventListener('hashchange', loadFromHash);
 
 // ─── Nav link click handler ────────────────────────────────────────────────────
 
