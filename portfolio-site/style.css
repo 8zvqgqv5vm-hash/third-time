@@ -398,7 +398,7 @@ a   { color: inherit; }
   font-size: 0.65rem;
   color: var(--faint);
 }
-
+.photo-cell img {
   transition: transform 0.5s var(--ease);
 }
 
